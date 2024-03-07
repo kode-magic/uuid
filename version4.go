@@ -37,7 +37,7 @@ func NewString() string {
 //  equivalent to the odds of creating a few tens of trillions of UUIDs in a
 //  year and having one duplicate.
 func NewRandom() (UUID, error) {
-	if !poolEnabled {
+	if !poolEnabled { //where is the poolEnabled variable coming from
 		return NewRandomFromReader(rander)
 	}
 	return newRandomFromPool()
